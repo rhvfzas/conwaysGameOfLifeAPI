@@ -1,0 +1,13 @@
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+
+WORKDIR /app
+COPY . .
+RUN dotnet restore
+RUN dotnet build -c Release
+
+# Install EF Core tools
+RUN dotnet tool install --global dotnet-ef --version 7.0.15
+ENV PATH="${PATH}:/root/.dotnet/tools"
+
+FROM build AS migrations
+ENTRYPOINT ["dotnet", "ef", "database", "update", "--project", "ConwaysGameOfLifeApi.csproj"]

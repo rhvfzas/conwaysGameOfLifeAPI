@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "0I7s2dgy4vssh1y9evXnfL6qvoFnKIE+c+G8PAqp8wk=",
+  "Source": "ConwaysGameOfLifeApi",
+  "BasePath": "_content/ConwaysGameOfLifeApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
